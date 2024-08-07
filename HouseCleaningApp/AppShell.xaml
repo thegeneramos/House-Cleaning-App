@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="HouseCleaningApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"   
+    xmlns:local="clr-namespace:HouseCleaningApp"
+    Shell.FlyoutBehavior="Flyout"
+    Title="HouseCleaningApp">
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="Beige" Padding="10">
+            <Image Source="househeader.png" Aspect="Fill" HeightRequest="100"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Home" Icon="homescreen.png">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Add Room" Icon="addhouse.png">
+        <ShellContent ContentTemplate="{DataTemplate local:AddRoomPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Current Home" Icon="house.png">
+        <ShellContent ContentTemplate="{DataTemplate local:CurrentHomePage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="About" Icon="abouticon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    
+
+</Shell>

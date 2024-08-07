@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HouseCleaningApp.AboutPage"
+             IconImageSource="abouticon.png"
+             Title="About">
+    <VerticalStackLayout Padding="20">
+        <Label Text="About this App" FontSize="Header" FontAttributes="Bold" />
+        <Label Text="My name is Gene, I created this app to help organize and schedule home cleaning tasks." VerticalOptions="Center"/>
+        <Label Text="Please feel free to reach out on Github on how I can improve this or unless you wanna buy the idea and pay me lots of $$"/>
+    </VerticalStackLayout>
+</ContentPage>

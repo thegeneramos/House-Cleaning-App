@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HouseCleaningApp.HomePage"
+             IconImageSource="homescreen.png"
+             Title="Home">
+    <StackLayout>
+        <Label 
+               Text="Welcome to your Home Cleaning Planner!"
+               TextColor="#333333"
+               FontSize="30"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+        <Image Source="homescreen.png" HeightRequest="200" WidthRequest="200"
+               VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Image Source="vacuum.png" HeightRequest="200" WidthRequest="200"
+               VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label 
+               Text="Organize and keep track of your home cleaning tasks easily!"
+               FontSize="18"
+               TextColor="#666666"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HouseCleaningApp.CurrentHomePage"
+             IconImageSource="house.png"
+             Title="Current Home">
+    <StackLayout Padding="20">
+        <Label 
+            Text="Rooms" FontSize="Header" TextColor="DarkBlue" FontAttributes="Bold" />
+        <!-- CollectionView to display the list of rooms -->
+        <CollectionView x:Name="RoomsCollectionView" ItemsSource="{Binding Room}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- StackLayout for each item in the CollectionView -->
+                    <StackLayout>
+                        <!-- Binding room name to the label -->
+                        <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                        <!-- Binding last cleaned date to label-->
+                        <Label Text="{Binding LastCleaned, StringFormat='Last Cleaned: {0:d}'}"/>
+                        <!-- Binding next clean date to the label-->
+                        <Label Text="{Binding NextClean, StringFormat='Next Clean: {0:d}'}" />
+                        <!-- Edit button-->
+                        <Button Text="Edit" Clicked="OnEditRoomButtonClicked" CommandParameter="{Binding .}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Label Text="Your home and cleaning schedule" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HouseCleaningApp.AddRoomPage"
+             IconImageSource="addhouse.png"
+             Title="Add Room">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Room Name"/>
+        <!-- Entry for the room name-->
+        <Entry x:Name="RoomNameEntry" Placeholder="Room Name"/>
+
+        <Label Text="Last Cleaned Date"/>
+        <!-- Date picker foe last cleaned date-->
+        <DatePicker x:Name="LastCleanedDatePicker" Date="{Binding LastCleaned}"/>
+
+        <Label Text="Next Cleaned Date"/>
+        <!-- Date picker foe next clean date-->
+        <DatePicker x:Name="NextCleanedDatePicker" Date="{Binding NextClean}"/>
+        <!-- Button to add the room -->
+        <Button Text="Add Room" Clicked="OnAddRoomButtonClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
